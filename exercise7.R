@@ -34,7 +34,9 @@ Size<-function(value){
 #usage:filespecies(SpeciesName)
 filespecies<- function(species){
   speciesgroup<-subset(irisdata,irisdata$Species==species)
-  write.csv(speciesgroup,file=paste(species))
+nameoffile1<-c(species,".csv")
+nameoffile<<-as.character(nameoffile1)
+  write.csv(speciesgroup,file=paste(nameoffile, sep="", collapse=""))
   
 }
-
+nameoffile
